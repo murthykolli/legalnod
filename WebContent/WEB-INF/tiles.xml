@@ -1,0 +1,1016 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
+<tiles-definitions>
+
+<!--Doc Center Before Log In Tiles-->
+
+	<definition name="base.docCenter" template="/WEB-INF/view/layouts/layout.jsp">
+		<put-attribute name="title" value="" />
+		<put-attribute name="header" value="/WEB-INF/view/layouts/docCenterBLHeader.jsp" />		
+		<put-attribute name="body" value="" />
+		<put-attribute name="footer" value="/WEB-INF/view/layouts/footer.jsp" />
+	</definition>
+
+	<definition name="docCenter" extends="base.docCenter">
+		<put-attribute name="title" value="Legal business entity types documents - LegalNod" />
+		<put-attribute name="body" value="/WEB-INF/view/docCenter/CompareBusinessTypes.jsp" />
+	</definition>
+	
+	<definition name="LimitedLiabilityCompanyDoc" extends="base.docCenter">
+		<put-attribute name="title" value="Register LLC Online, Amendment For An Limited Liability Company" />
+		<put-attribute name="body" value="/WEB-INF/view/docCenter/LimitedLiabilityCompany.jsp" />
+	</definition>
+	
+	<definition name="LimitedPartnershipDoc" extends="base.docCenter">
+		<put-attribute name="title" value="Limited Partnership for Doc Center" />
+		<put-attribute name="body" value="/WEB-INF/view/docCenter/LimitedPartnership.jsp" />
+	</definition>
+	
+	<definition name="LimitedLiabilityPartnershipDoc" extends="base.docCenter">
+		<put-attribute name="title" value="Limited Liability Partnership Formation (LLP) - LegalNod" />
+		<put-attribute name="body" value="/WEB-INF/view/docCenter/LimitedLiabilityPartnership.jsp" />
+	</definition>
+	
+	<definition name="ProfessionalCorpDoc" extends="base.docCenter">
+		<put-attribute name="title" value="Forming Professional Corporation – Legalnod" />
+		<put-attribute name="body" value="/WEB-INF/view/docCenter/ProfessionalCorporation.jsp" />
+	</definition>
+	
+	<definition name="NonProfitCorpDoc" extends="base.docCenter">
+		<put-attribute name="title" value="Non Profit Corporation for Doc Center" />
+		<put-attribute name="body" value="/WEB-INF/view/docCenter/Non-ProfitCorporation.jsp" />
+	</definition>
+	
+	<definition name="CCorpDoc" extends="base.docCenter">
+		<put-attribute name="title" value="C Corporation for Doc Center" />
+		<put-attribute name="body" value="/WEB-INF/view/docCenter/CCorporation.jsp" />
+	</definition>
+	
+	<definition name="SCorpDoc" extends="base.docCenter">
+		<put-attribute name="title" value="S Corporation for Doc Center" />
+		<put-attribute name="body" value="/WEB-INF/view/docCenter/SCorporation.jsp" />
+	</definition>
+	
+	<definition name="soleProprietorshipForBS" extends="base.docCenter">
+		<put-attribute name="title" value="Sole Proprietorship for Doc Center" />
+		<put-attribute name="body" value="/WEB-INF/view/docCenter/SoleProprietorship.jsp" />
+	</definition>
+	
+	<definition name="generalPartnershipForBS" extends="base.docCenter">
+		<put-attribute name="title" value="Partnership in Business - LegalNod" />
+		<put-attribute name="body" value="/WEB-INF/view/docCenter/GeneralPartnership.jsp" />
+	</definition>
+	
+	<definition name="ForeignQualificationsDoc" extends="base.docCenter">
+		<put-attribute name="title" value="Foreign Qualification for Doc Center" />
+		<put-attribute name="body" value="/WEB-INF/view/docCenter/ForeignQualifications.jsp" />
+	</definition>
+	
+	<definition name="AmendmentsChangesDoc" extends="base.docCenter">
+		<put-attribute name="title" value="Amendments Changes for Doc Center" />
+		<put-attribute name="body" value="/WEB-INF/view/docCenter/AmendmentsorChanges.jsp" />
+	</definition>
+	
+	<definition name="DissolutionsTerminationsDoc" extends="base.docCenter">
+		<put-attribute name="title" value="Business Termination - LegalNod" />
+		<put-attribute name="body" value="/WEB-INF/view/docCenter/DissolutionsorTerminations.jsp" />
+	</definition>
+	
+	<definition name="NameChangeDoc" extends="base.docCenter">
+		<put-attribute name="title" value="Corporation Formation Documents, Business Name Change - LegalNod" />
+		<put-attribute name="body" value="/WEB-INF/view/docCenter/NameChange.jsp" />
+	</definition>
+	
+	<definition name="ConversionsDoc" extends="base.docCenter">
+		<put-attribute name="title" value="Business Conversion Document - Legalnod" />
+		<put-attribute name="body" value="/WEB-INF/view/docCenter/Conversions.jsp" />
+	</definition>
+	
+	<definition name="NameAvailabilityCheckDoc" extends="base.docCenter">
+		<put-attribute name="title" value="Business Entity Name Reservation, Business Name Availability Check" />
+		<put-attribute name="body" value="/WEB-INF/view/docCenter/NameAvailabilityCheck.jsp" />
+	</definition>
+	
+	<definition name="NameReservationDoc" extends="base.docCenter">
+		<put-attribute name="title" value="Name Reservation for Doc Center" />
+		<put-attribute name="body" value="/WEB-INF/view/docCenter/NameReservation.jsp" />
+	</definition>
+	
+	<definition name="DoingBusinessAsDoc" extends="base.docCenter">
+		<put-attribute name="title" value="Doing Business As, File A DBA - Legalnod" />
+		<put-attribute name="body" value="/WEB-INF/view/docCenter/DoingBusinessAs.jsp" />
+	</definition>
+	
+	<definition name="TrademarkStateRegistrationForDoc" extends="base.docCenter">
+		<put-attribute name="title" value="Trademark State Registration for Doc Center" />
+		<put-attribute name="body" value="/WEB-INF/view/docCenter/TrademarkStateRegistration.jsp" />
+	</definition>
+	
+	<definition name="AnnualReportsDoc" extends="base.docCenter">
+		<put-attribute name="title" value="Filing Business Annual Reports - Legalnod" />
+		<put-attribute name="body" value="/WEB-INF/view/docCenter/AnnualReport.jsp" />
+	</definition>
+	
+	<definition name="InitialReportsDoc" extends="base.docCenter">
+		<put-attribute name="title" value="Initial Reports for Doc Center" />
+		<put-attribute name="body" value="/WEB-INF/view/docCenter/InitialReport.jsp" />
+	</definition>
+	
+	<definition name="FederalTaxIDDoc" extends="base.docCenter">
+		<put-attribute name="title" value="Fein Number, Federal Tax ID (EIN) Number - LegalNod" />
+		<put-attribute name="body" value="/WEB-INF/view/docCenter/FederalTaxID.jsp" />
+	</definition>
+	
+	<definition name="StateTaxIDDoc" extends="base.docCenter">
+		<put-attribute name="title" value="Obtain State Tax Id - LegalNod" />
+		<put-attribute name="body" value="/WEB-INF/view/docCenter/StateTaxID.jsp" />
+	</definition>
+	
+	<definition name="501c3ApplicationDoc" extends="base.docCenter">
+		<put-attribute name="title" value="Filing a 501(c)(3) Application - Legalnod" />
+		<put-attribute name="body" value="/WEB-INF/view/docCenter/501(c)(3)Application.jsp" />
+	</definition>
+	
+	<definition name="CertificateOfGoodStandingForDoc" extends="base.docCenter">
+		<put-attribute name="title" value="Certificate Of Good Standing for Doc Center" />
+		<put-attribute name="body" value="/WEB-INF/view/docCenter/CertificateofGoodStanding.jsp" />
+	</definition>
+	
+	<definition name="CertifiedCopiesForDoc" extends="base.docCenter">
+		<put-attribute name="title" value="Certified Copies for Doc Center" />
+		<put-attribute name="body" value="/WEB-INF/view/docCenter/CertifiedCopies.jsp" />
+	</definition>
+	
+	<definition name="ReinstatementOfBusinessForDoc" extends="base.docCenter">
+		<put-attribute name="title" value="Business Reinstatement, Reinstating Your Business - Legalnod" />
+		<put-attribute name="body" value="/WEB-INF/view/docCenter/ReinstatementofBusiness.jsp" />
+	</definition>
+	
+	<definition name="RegisteredAgentForDoc" extends="base.docCenter">
+		<put-attribute name="title" value="Registered Agent Service - Legalnod" />
+		<put-attribute name="body" value="/WEB-INF/view/docCenter/RegisteredAgent.jsp" />
+	</definition>
+	
+	<!--Doc Center Before Log In Tiles-->
+
+	<definition name="base.docCenterAL" template="/WEB-INF/view/layouts/layout.jsp">
+		<put-attribute name="title" value="" />
+		<put-attribute name="header" value="/WEB-INF/view/layouts/docCenterALHeader.jsp" />		
+		<put-attribute name="body" value="" />
+		<put-attribute name="footer" value="/WEB-INF/view/layouts/footer.jsp" />
+	</definition>
+
+	<definition name="docCenterAL" extends="base.docCenterAL">
+		<put-attribute name="title" value="Doc Center Compare Business Types" />
+		<put-attribute name="body" value="/WEB-INF/view/docCenter/CompareBusinessTypes.jsp" />
+	</definition>
+	
+	<definition name="LimitedLiabilityCompanyDocAL" extends="base.docCenterAL">
+		<put-attribute name="title" value="Doc Center Limited Liability Company" />
+		<put-attribute name="body" value="/WEB-INF/view/docCenter/LimitedLiabilityCompany.jsp" />
+	</definition>
+	
+	<definition name="LimitedPartnershipDocAL" extends="base.docCenterAL">
+		<put-attribute name="title" value="Doc Center Limited Partnership" />
+		<put-attribute name="body" value="/WEB-INF/view/docCenter/LimitedPartnership.jsp" />
+	</definition>
+	
+	<definition name="LimitedLiabilityPartnershipDocAL" extends="base.docCenterAL">
+		<put-attribute name="title" value="Doc Center Limited Liability Partnership" />
+		<put-attribute name="body" value="/WEB-INF/view/docCenter/LimitedLiabilityPartnership.jsp" />
+	</definition>
+	
+	<definition name="ProfessionalCorpDocAL" extends="base.docCenterAL">
+		<put-attribute name="title" value="Doc Center Professional Corporation" />
+		<put-attribute name="body" value="/WEB-INF/view/docCenter/ProfessionalCorporation.jsp" />
+	</definition>
+	
+	<definition name="NonProfitCorpDocAL" extends="base.docCenterAL">
+		<put-attribute name="title" value="Doc Center Non Profit Corporation" />
+		<put-attribute name="body" value="/WEB-INF/view/docCenter/Non-ProfitCorporation.jsp" />
+	</definition>
+	
+	<definition name="CCorpDocAL" extends="base.docCenterAL">
+		<put-attribute name="title" value="Doc Center C Corporation" />
+		<put-attribute name="body" value="/WEB-INF/view/docCenter/CCorporation.jsp" />
+	</definition>
+	
+	<definition name="SCorpDocAL" extends="base.docCenterAL">
+		<put-attribute name="title" value="Doc Center S Corporation" />
+		<put-attribute name="body" value="/WEB-INF/view/docCenter/SCorporation.jsp" />
+	</definition>
+	
+	<definition name="soleProprietorshipForBSAL" extends="base.docCenterAL">
+		<put-attribute name="title" value="Doc Center Sole Proprietorship" />
+		<put-attribute name="body" value="/WEB-INF/view/docCenter/SoleProprietorship.jsp" />
+	</definition>
+	
+	<definition name="generalPartnershipForBSAL" extends="base.docCenterAL">
+		<put-attribute name="title" value="Doc Center General Partnership" />
+		<put-attribute name="body" value="/WEB-INF/view/docCenter/GeneralPartnership.jsp" />
+	</definition>
+	
+	<definition name="ForeignQualificationsDocAL" extends="base.docCenterAL">
+		<put-attribute name="title" value="Doc Center Foreign Qualification" />
+		<put-attribute name="body" value="/WEB-INF/view/docCenter/ForeignQualifications.jsp" />
+	</definition>
+	
+	<definition name="AmendmentsChangesDocAL" extends="base.docCenterAL">
+		<put-attribute name="title" value="Doc Center Amendments Changes" />
+		<put-attribute name="body" value="/WEB-INF/view/docCenter/AmendmentsorChanges.jsp" />
+	</definition>
+	
+	<definition name="DissolutionsTerminationsDocAL" extends="base.docCenterAL">
+		<put-attribute name="title" value="Doc Center Dissolutions or Terminations" />
+		<put-attribute name="body" value="/WEB-INF/view/docCenter/DissolutionsorTerminations.jsp" />
+	</definition>
+	
+	<definition name="NameChangeDocAL" extends="base.docCenterAL">
+		<put-attribute name="title" value="Doc Center Name Change" />
+		<put-attribute name="body" value="/WEB-INF/view/docCenter/NameChange.jsp" />
+	</definition>
+	
+	<definition name="ConversionsDocAL" extends="base.docCenterAL">
+		<put-attribute name="title" value="Doc Center Conversions" />
+		<put-attribute name="body" value="/WEB-INF/view/docCenter/Conversions.jsp" />
+	</definition>
+	
+	<definition name="NameAvailabilityCheckDocAL" extends="base.docCenterAL">
+		<put-attribute name="title" value="Doc Center Name Availability Check" />
+		<put-attribute name="body" value="/WEB-INF/view/docCenter/NameAvailabilityCheck.jsp" />
+	</definition>
+	
+	<definition name="NameReservationDocAL" extends="base.docCenterAL">
+		<put-attribute name="title" value="Doc Center Name Reservation" />
+		<put-attribute name="body" value="/WEB-INF/view/docCenter/NameReservation.jsp" />
+	</definition>
+	
+	<definition name="DoingBusinessAsDocAL" extends="base.docCenterAL">
+		<put-attribute name="title" value="Doc Center Doing Business As" />
+		<put-attribute name="body" value="/WEB-INF/view/docCenter/DoingBusinessAs.jsp" />
+	</definition>
+	
+	<definition name="TrademarkStateRegistrationForDocAL" extends="base.docCenterAL">
+		<put-attribute name="title" value="Doc Center Trademark State Registration" />
+		<put-attribute name="body" value="/WEB-INF/view/docCenter/TrademarkStateRegistration.jsp" />
+	</definition>
+	
+	<definition name="AnnualReportsDocAL" extends="base.docCenterAL">
+		<put-attribute name="title" value="Doc Center Annual Reports" />
+		<put-attribute name="body" value="/WEB-INF/view/docCenter/AnnualReport.jsp" />
+	</definition>
+	
+	<definition name="InitialReportsDocAL" extends="base.docCenterAL">
+		<put-attribute name="title" value="Doc Center Initial Reports" />
+		<put-attribute name="body" value="/WEB-INF/view/docCenter/InitialReport.jsp" />
+	</definition>
+	
+	<definition name="FederalTaxIDDocAL" extends="base.docCenterAL">
+		<put-attribute name="title" value="Doc Center Federal Tax ID" />
+		<put-attribute name="body" value="/WEB-INF/view/docCenter/FederalTaxID.jsp" />
+	</definition>
+	
+	<definition name="StateTaxIDDocAL" extends="base.docCenterAL">
+		<put-attribute name="title" value="Doc Center State Tax ID" />
+		<put-attribute name="body" value="/WEB-INF/view/docCenter/StateTaxID.jsp" />
+	</definition>
+	
+	<definition name="501c3ApplicationDocAL" extends="base.docCenterAL">
+		<put-attribute name="title" value="Doc Center 501(c)(3) Application" />
+		<put-attribute name="body" value="/WEB-INF/view/docCenter/501(c)(3)Application.jsp" />
+	</definition>
+	
+	<definition name="CertificateOfGoodStandingForDocAL" extends="base.docCenterAL">
+		<put-attribute name="title" value="Doc Center Certificate Of Good Standing" />
+		<put-attribute name="body" value="/WEB-INF/view/docCenter/CertificateofGoodStanding.jsp" />
+	</definition>
+	
+	<definition name="CertifiedCopiesForDocAL" extends="base.docCenterAL">
+		<put-attribute name="title" value="Doc Center Certified Copies" />
+		<put-attribute name="body" value="/WEB-INF/view/docCenter/CertifiedCopies.jsp" />
+	</definition>
+	
+	<definition name="ReinstatementOfBusinessForDocAL" extends="base.docCenterAL">
+		<put-attribute name="title" value="Doc Center Reinstatement Of Business" />
+		<put-attribute name="body" value="/WEB-INF/view/docCenter/ReinstatementofBusiness.jsp" />
+	</definition>
+	
+	<definition name="RegisteredAgentForDocAL" extends="base.docCenterAL">
+		<put-attribute name="title" value="Doc Center Registered Agent" />
+		<put-attribute name="body" value="/WEB-INF/view/docCenter/RegisteredAgent.jsp" />
+	</definition>
+	
+<!--Home Page Before Log In Tiles-->
+
+	<definition name="base.homePage" template="/WEB-INF/view/layouts/layout.jsp">
+		<put-attribute name="title" value="" />
+		<put-attribute name="header" value="/WEB-INF/view/layouts/homeBLHeader.jsp" />		
+		<put-attribute name="body" value="" />
+		<put-attribute name="footer" value="/WEB-INF/view/layouts/homefooter.jsp" />
+	</definition>
+
+	<definition name="legalNodHome" extends="base.homePage">
+		<put-attribute name="title" value="Free Online Legal Documents - LegalNod" />
+		<put-attribute name="body" value="/WEB-INF/view/home/HomePage.jsp" />
+	</definition>
+	
+	<!--Home Page After Log In Tiles-->
+
+	<definition name="base.homePageAL" template="/WEB-INF/view/layouts/layout.jsp">
+		<put-attribute name="title" value="" />
+		<put-attribute name="header" value="/WEB-INF/view/layouts/homeALHeader.jsp" />		
+		<put-attribute name="body" value="" />
+		<put-attribute name="footer" value="/WEB-INF/view/layouts/homefooter.jsp" />
+	</definition>
+
+	<definition name="legalNodHomeAL" extends="base.homePageAL">
+		<put-attribute name="title" value="Online Legal Forms Services and Legal Documents Services by LegalNod" />
+		<put-attribute name="body" value="/WEB-INF/view/home/HomePage.jsp" />
+	</definition>	
+	
+	<!--Custom Documents Page Before Log In Tiles-->
+
+	<definition name="base.custDoc" template="/WEB-INF/view/layouts/layout.jsp">
+		<put-attribute name="title" value="" />
+		<put-attribute name="header" value="/WEB-INF/view/layouts/customDocumentBLHeader.jsp" />		
+		<put-attribute name="body" value="" />
+		<put-attribute name="footer" value="/WEB-INF/view/layouts/footer.jsp" />
+	</definition>
+
+	<definition name="customDocument" extends="base.custDoc">
+		<put-attribute name="title" value="Custom Document for Doc Center" />
+		<put-attribute name="body" value="/WEB-INF/view/customDocument/customDocument.jsp" />
+	</definition>
+	
+	<!--Custom Documents Page After Log In Tiles-->
+
+	<definition name="base.custDocAL" template="/WEB-INF/view/layouts/layout.jsp">
+		<put-attribute name="title" value="" />
+		<put-attribute name="header" value="/WEB-INF/view/layouts/customDocumentALHeader.jsp" />		
+		<put-attribute name="body" value="" />
+		<put-attribute name="footer" value="/WEB-INF/view/layouts/footer.jsp" />
+	</definition>
+
+	<definition name="customDocumentAL" extends="base.custDocAL">
+		<put-attribute name="title" value="Doc Center Custom Document" />
+		<put-attribute name="body" value="/WEB-INF/view/customDocument/customDocument.jsp" />
+	</definition>
+		
+	<!--Service By State Page Before Log In Tiles-->
+
+	<definition name="base.serByState" template="/WEB-INF/view/layouts/layout.jsp">
+		<put-attribute name="title" value="" />
+		<put-attribute name="header" value="/WEB-INF/view/layouts/serviceByStateBLHeader.jsp" />		
+		<put-attribute name="body" value="" />
+		<put-attribute name="footer" value="/WEB-INF/view/layouts/footer.jsp" />
+	</definition>
+
+	<definition name="servicesByState" extends="base.serByState">
+		<put-attribute name="title" value="Services by State" />
+		<put-attribute name="body" value="/WEB-INF/view/serviceByState/serviceByState.jsp" />
+	</definition>
+	
+	<!--Service By State Page After Log In Tiles-->
+
+	<definition name="base.serByStateAL" template="/WEB-INF/view/layouts/layout.jsp">
+		<put-attribute name="title" value="" />
+		<put-attribute name="header" value="/WEB-INF/view/layouts/serviceByStateALHeader.jsp" />		
+		<put-attribute name="body" value="" />
+		<put-attribute name="footer" value="/WEB-INF/view/layouts/footer.jsp" />
+	</definition>
+
+	<definition name="servicesByStateAL" extends="base.serByStateAL">
+		<put-attribute name="title" value="LegalNod Services by State" />
+		<put-attribute name="body" value="/WEB-INF/view/serviceByState/serviceByState.jsp" />
+	</definition>	
+	
+	<!--Business Service Page Before Log In Tiles-->
+
+	<definition name="base.busSer" template="/WEB-INF/view/layouts/layout.jsp">
+		<put-attribute name="title" value="" />
+		<put-attribute name="header" value="/WEB-INF/view/layouts/businessServicesBLHeader.jsp" />		
+		<put-attribute name="body" value="" />
+		<put-attribute name="footer" value="/WEB-INF/view/layouts/footer.jsp" />
+	</definition>
+	
+	<!--Business Service Home Pages Before Log In Tiles-->
+
+	<definition name="minBsAdditionalServices" extends="base.busSer">
+		<put-attribute name="title" value="Additional Services Hide for Business Service" />
+		<put-attribute name="body" value="/WEB-INF/view/businessServices/businessServiceHome/additionalServicesHide.jsp" />
+	</definition>
+	
+	<definition name="bsAdditionalServices" extends="base.busSer">
+		<put-attribute name="title" value="Additional Services Show for Business Service" />
+		<put-attribute name="body" value="/WEB-INF/view/businessServices/businessServiceHome/additionalServicesShow.jsp" />
+	</definition>
+	
+	<definition name="minBsComplaints" extends="base.busSer">
+		<put-attribute name="title" value="Compliance Hide for Business Service" />
+		<put-attribute name="body" value="/WEB-INF/view/businessServices/businessServiceHome/complianceHide.jsp" />
+	</definition>
+	
+	<definition name="bsComplaints" extends="base.busSer">
+		<put-attribute name="title" value="Business compliance - LegalNod" />
+		<put-attribute name="body" value="/WEB-INF/view/businessServices/businessServiceHome/complianceShow.jsp" />
+	</definition>
+	
+	<definition name="minBsFormingYrBus" extends="base.busSer">
+		<put-attribute name="title" value="Start online a business and company - LegalNod" />
+		<put-attribute name="body" value="/WEB-INF/view/businessServices/businessServiceHome/formingYourBusinessHide.jsp" />
+	</definition>
+	
+	<definition name="businessServices" extends="base.busSer">
+		<put-attribute name="title" value="Business and company registration - LegalNod.com" />
+		<put-attribute name="body" value="/WEB-INF/view/businessServices/businessServiceHome/formingYourBusinessShow.jsp" />
+	</definition>
+	
+	<definition name="minBsManagingYourBusiness" extends="base.busSer">
+		<put-attribute name="title" value="Managing Your Business Hide for Business Service" />
+		<put-attribute name="body" value="/WEB-INF/view/businessServices/businessServiceHome/managingYourBusinessHide.jsp" />
+	</definition>
+	
+	<definition name="bsManagingYourBusiness" extends="base.busSer">
+		<put-attribute name="title" value="Managing Your Business Show for Business Service" />
+		<put-attribute name="body" value="/WEB-INF/view/businessServices/businessServiceHome/managingYourBusinessShow.jsp" />
+	</definition>
+	
+	<definition name="minBsNamingYourBusiness" extends="base.busSer">
+		<put-attribute name="title" value="Naming Your Business Hide for Business Service" />
+		<put-attribute name="body" value="/WEB-INF/view/businessServices/businessServiceHome/namingYourBusinessHide.jsp" />
+	</definition>
+	
+	<definition name="bsNamingYourBusiness" extends="base.busSer">
+		<put-attribute name="title" value="Naming Your Business Show for Business Service" />
+		<put-attribute name="body" value="/WEB-INF/view/businessServices/businessServiceHome/namingYourBusinessShow.jsp" />
+	</definition>
+	
+	<definition name="minBsTrademark" extends="base.busSer">
+		<put-attribute name="title" value="Trademark Hide for Business Service" />
+		<put-attribute name="body" value="/WEB-INF/view/businessServices/businessServiceHome/trademarkHide.jsp" />
+	</definition>
+	
+	<definition name="bsTrademark" extends="base.busSer">
+		<put-attribute name="title" value="Trademark Show for Business Service" />
+		<put-attribute name="body" value="/WEB-INF/view/businessServices/businessServiceHome/trademarkShow.jsp" />
+	</definition>
+	
+	<!--Business Service Drop Down Before Log In Tiles-->
+
+	<definition name="limitedLiabilityCompanyForBS" extends="base.busSer">
+		<put-attribute name="title" value="Operating agreement for LLC for company - LegalNod" />
+		<put-attribute name="body" value="/WEB-INF/view/businessServices/businessServicesDropDown/LimitedLiabilityCompany.jsp" />
+	</definition>
+	
+	<definition name="limitedPartnershipForBS" extends="base.busSer">
+		<put-attribute name="title" value="Limited Partnership for Business Service" />
+		<put-attribute name="body" value="/WEB-INF/view/businessServices/businessServicesDropDown/LimitedPartnership.jsp" />
+	</definition>
+	
+	<definition name="limitedLiabilityPartnershipForBS" extends="base.busSer">
+		<put-attribute name="title" value="Limited Liability Partnership for Business Service" />
+		<put-attribute name="body" value="/WEB-INF/view/businessServices/businessServicesDropDown/LimitedLiabilityPartnership.jsp" />
+	</definition>
+	
+	<definition name="professionalCorporationForBS" extends="base.busSer">
+		<put-attribute name="title" value="Professional Corporation for Business Service" />
+		<put-attribute name="body" value="/WEB-INF/view/businessServices/businessServicesDropDown/ProfessionalCorporation.jsp" />
+	</definition>
+	
+	<definition name="nonProfitCorporationForBS" extends="base.busSer">
+		<put-attribute name="title" value="Forming Non-Profit Corporation - Legalnod" />
+		<put-attribute name="body" value="/WEB-INF/view/businessServices/businessServicesDropDown/Non_ProfitCorporation.jsp" />
+	</definition>
+	
+	<definition name="cCorporationForBS" extends="base.busSer">
+		<put-attribute name="title" value="Business Incorporation Services - LegalNod.com" />
+		<put-attribute name="body" value="/WEB-INF/view/businessServices/businessServicesDropDown/C_Corporation.jsp" />
+	</definition>
+	
+	<definition name="sCorporationForBS" extends="base.busSer">
+		<put-attribute name="title" value="S Corporation for Business Service" />
+		<put-attribute name="body" value="/WEB-INF/view/businessServices/businessServicesDropDown/S_Corporation.jsp" />
+	</definition>	
+	
+	<definition name="foreignQualificationsForBS" extends="base.busSer">
+		<put-attribute name="title" value="Foreign Qualification for Business Service" />
+		<put-attribute name="body" value="/WEB-INF/view/businessServices/businessServicesDropDown/ForeignQualifications.jsp" />
+	</definition>
+	
+	<definition name="amendmentsForBS" extends="base.busSer">
+		<put-attribute name="title" value="Amendments Changes for Business Service" />
+		<put-attribute name="body" value="/WEB-INF/view/businessServices/businessServicesDropDown/AmendmentsChanges.jsp" />
+	</definition>
+	
+	<definition name="dissolutionsOrTerminationsForBS" extends="base.busSer">
+		<put-attribute name="title" value="Dissolutions or Terminations for Business Service" />
+		<put-attribute name="body" value="/WEB-INF/view/businessServices/businessServicesDropDown/DissolutionsTerminations.jsp" />
+	</definition>
+	
+	<definition name="nameChangeForBS" extends="base.busSer">
+		<put-attribute name="title" value="Name Change for Business Service" />
+		<put-attribute name="body" value="/WEB-INF/view/businessServices/businessServicesDropDown/NameChange.jsp" />
+	</definition>
+	
+	<definition name="conversionsForBS" extends="base.busSer">
+		<put-attribute name="title" value="Conversions for Business Service" />
+		<put-attribute name="body" value="/WEB-INF/view/businessServices/businessServicesDropDown/Conversions.jsp" />
+	</definition>
+	
+	<definition name="nameAvailabilityCheckForBS" extends="base.busSer">
+		<put-attribute name="title" value="Online Business Names Search - LegalNod.com" />
+		<put-attribute name="body" value="/WEB-INF/view/businessServices/businessServicesDropDown/NameAvailabilityCheck.jsp" />
+	</definition>
+	
+	<definition name="nameReservationForBS" extends="base.busSer">
+		<put-attribute name="title" value="Name Reservation for Business Service" />
+		<put-attribute name="body" value="/WEB-INF/view/businessServices/businessServicesDropDown/NameReservation.jsp" />
+	</definition>
+	
+	<definition name="doingBusinessAsForBS" extends="base.busSer">
+		<put-attribute name="title" value="Doing Business As for Business Service" />
+		<put-attribute name="body" value="/WEB-INF/view/businessServices/businessServicesDropDown/DoingBusinessAs.jsp" />
+	</definition>
+	
+	<definition name="trademarkStateRegistrationForBS" extends="base.busSer">
+		<put-attribute name="title" value="Trademark State Registration for Business Service" />
+		<put-attribute name="body" value="/WEB-INF/view/businessServices/businessServicesDropDown/TrademarkStateRegistration.jsp" />
+	</definition>
+	
+	<definition name="annualReportsForBS" extends="base.busSer">
+		<put-attribute name="title" value="Annual Reports for Business Service" />
+		<put-attribute name="body" value="/WEB-INF/view/businessServices/businessServicesDropDown/AnnualReports.jsp" />
+	</definition>
+	
+	<definition name="initialReportsForBS" extends="base.busSer">
+		<put-attribute name="title" value="Filing an Initial Business Report - Legalnod" />
+		<put-attribute name="body" value="/WEB-INF/view/businessServices/businessServicesDropDown/InitialReports.jsp" />
+	</definition>
+	
+	<definition name="federalTaxIDForBS" extends="base.busSer">
+		<put-attribute name="title" value="Federal Tax ID for Business Service" />
+		<put-attribute name="body" value="/WEB-INF/view/businessServices/businessServicesDropDown/FederalTaxId.jsp" />
+	</definition>
+	
+	<definition name="asStateTaxID" extends="base.busSer">
+		<put-attribute name="title" value="State Tax ID for Business Service" />
+		<put-attribute name="body" value="/WEB-INF/view/businessServices/businessServicesDropDown/StateTaxId.jsp" />
+	</definition>
+	
+	<definition name="fiveZeroOneApplicationForBS" extends="base.busSer">
+		<put-attribute name="title" value="501(c)(3) Application for Business Service" />
+		<put-attribute name="body" value="/WEB-INF/view/businessServices/businessServicesDropDown/501c3Application.jsp" />
+	</definition>
+	
+	<definition name="certificateOfGoodStandingForBS" extends="base.busSer">
+		<put-attribute name="title" value="Certificate of Good Standing - LegalNod" />
+		<put-attribute name="body" value="/WEB-INF/view/businessServices/businessServicesDropDown/CertificateOfGoodStanding.jsp" />
+	</definition>
+	
+	<definition name="certifiedCopiesForBS" extends="base.busSer">
+		<put-attribute name="title" value="Certified Copies for Business Service" />
+		<put-attribute name="body" value="/WEB-INF/view/businessServices/businessServicesDropDown/CertifiedCopies.jsp" />
+	</definition>
+	
+	<definition name="reinstatementOfBusinessForBS" extends="base.busSer">
+		<put-attribute name="title" value="Reinstatement Of Business for Business Service" />
+		<put-attribute name="body" value="/WEB-INF/view/businessServices/businessServicesDropDown/ReinstatementOfBusiness.jsp" />
+	</definition>
+	
+	<definition name="registeredAgentForBS" extends="base.busSer">
+		<put-attribute name="title" value="Registered Agent for Business Service" />
+		<put-attribute name="body" value="/WEB-INF/view/businessServices/businessServicesDropDown/RegisteredAgent.jsp" />
+	</definition>
+	
+	<!--Business Service Page After Log In Tiles-->
+
+	<definition name="base.busSerAL" template="/WEB-INF/view/layouts/layout.jsp">
+		<put-attribute name="title" value="" />
+		<put-attribute name="header" value="/WEB-INF/view/layouts/businessServicesALHeader.jsp" />		
+		<put-attribute name="body" value="" />
+		<put-attribute name="footer" value="/WEB-INF/view/layouts/footer.jsp" />
+	</definition>
+	
+	<!--Business Service User Profile Pages Tiles-->
+
+	<definition name="editUserProfile" extends="base.busSerAL">
+		<put-attribute name="title" value="Business Service User Profile" />
+		<put-attribute name="body" value="/WEB-INF/view/businessServices/userProfile/userProfile.jsp" />
+	</definition>
+	
+	<!--Business Service Home Pages After Log In Tiles-->	
+	
+	<definition name="minBsAdditionalServicesAL" extends="base.busSerAL">
+		<put-attribute name="title" value="Business Service Additional Services Hide" />
+		<put-attribute name="body" value="/WEB-INF/view/businessServices/businessServiceHome/additionalServicesHide.jsp" />
+	</definition>
+	
+	<definition name="bsAdditionalServicesAL" extends="base.busSerAL">
+		<put-attribute name="title" value="Business Service Additional Services Show" />
+		<put-attribute name="body" value="/WEB-INF/view/businessServices/businessServiceHome/additionalServicesShow.jsp" />
+	</definition>
+	
+	<definition name="minBsComplaintsAL" extends="base.busSerAL">
+		<put-attribute name="title" value="Business Service Compliance Hide" />
+		<put-attribute name="body" value="/WEB-INF/view/businessServices/businessServiceHome/complianceHide.jsp" />
+	</definition>
+	
+	<definition name="bsComplaintsAL" extends="base.busSerAL">
+		<put-attribute name="title" value="Business Service compliance Show" />
+		<put-attribute name="body" value="/WEB-INF/view/businessServices/businessServiceHome/complianceShow.jsp" />
+	</definition>
+	
+	<definition name="minBsFormingYrBusAL" extends="base.busSerAL">
+		<put-attribute name="title" value="Business Service Forming Your Business Hide" />
+		<put-attribute name="body" value="/WEB-INF/view/businessServices/businessServiceHome/formingYourBusinessHide.jsp" />
+	</definition>
+	
+	<definition name="businessServicesAL" extends="base.busSerAL">
+		<put-attribute name="title" value="Business Service Forming Your Business Show" />
+		<put-attribute name="body" value="/WEB-INF/view/businessServices/businessServiceHome/formingYourBusinessShow.jsp" />
+	</definition>
+	
+	<definition name="minBsManagingYourBusinessAL" extends="base.busSerAL">
+		<put-attribute name="title" value="Business Service Managing Your Business Hide" />
+		<put-attribute name="body" value="/WEB-INF/view/businessServices/businessServiceHome/managingYourBusinessHide.jsp" />
+	</definition>
+	
+	<definition name="bsManagingYourBusinessAL" extends="base.busSerAL">
+		<put-attribute name="title" value="Business Service Managing Your Business Show" />
+		<put-attribute name="body" value="/WEB-INF/view/businessServices/businessServiceHome/managingYourBusinessShow.jsp" />
+	</definition>
+	
+	<definition name="minBsNamingYourBusinessAL" extends="base.busSerAL">
+		<put-attribute name="title" value="Business Service Naming Your Business Hide" />
+		<put-attribute name="body" value="/WEB-INF/view/businessServices/businessServiceHome/namingYourBusinessHide.jsp" />
+	</definition>
+	
+	<definition name="bsNamingYourBusinessAL" extends="base.busSerAL">
+		<put-attribute name="title" value="Business Service Naming Your Business Show" />
+		<put-attribute name="body" value="/WEB-INF/view/businessServices/businessServiceHome/namingYourBusinessShow.jsp" />
+	</definition>
+	
+	<definition name="minBsTrademarkAL" extends="base.busSerAL">
+		<put-attribute name="title" value="Business Service Trademark Hide" />
+		<put-attribute name="body" value="/WEB-INF/view/businessServices/businessServiceHome/trademarkHide.jsp" />
+	</definition>
+	
+	<definition name="bsTrademarkAL" extends="base.busSerAL">
+		<put-attribute name="title" value="Business Service Trademark Show" />
+		<put-attribute name="body" value="/WEB-INF/view/businessServices/businessServiceHome/trademarkShow.jsp" />
+	</definition>
+	
+	<!--Business Service Drop Down After Log In Tiles-->
+	
+	<definition name="limitedLiabilityCompanyForBSAL" extends="base.busSerAL">
+		<put-attribute name="title" value="Business Service Limited Liability Company" />
+		<put-attribute name="body" value="/WEB-INF/view/businessServices/businessServicesDropDown/LimitedLiabilityCompany.jsp" />
+	</definition>
+	
+	<definition name="limitedPartnershipForBSAL" extends="base.busSerAL">
+		<put-attribute name="title" value="Business Service Limited Partnership" />
+		<put-attribute name="body" value="/WEB-INF/view/businessServices/businessServicesDropDown/LimitedPartnership.jsp" />
+	</definition>
+	
+	<definition name="limitedLiabilityPartnershipForBSAL" extends="base.busSerAL">
+		<put-attribute name="title" value="Business Service Limited Liability Partnership" />
+		<put-attribute name="body" value="/WEB-INF/view/businessServices/businessServicesDropDown/LimitedLiabilityPartnership.jsp" />
+	</definition>
+	
+	<definition name="professionalCorporationForBSAL" extends="base.busSerAL">
+		<put-attribute name="title" value="Business Service Professional Corporation" />
+		<put-attribute name="body" value="/WEB-INF/view/businessServices/businessServicesDropDown/ProfessionalCorporation.jsp" />
+	</definition>
+	
+	<definition name="nonProfitCorporationForBSAL" extends="base.busSerAL">
+		<put-attribute name="title" value="Business Service Non Profit Corporation" />
+		<put-attribute name="body" value="/WEB-INF/view/businessServices/businessServicesDropDown/Non_ProfitCorporation.jsp" />
+	</definition>
+	
+	<definition name="cCorporationForBSAL" extends="base.busSerAL">
+		<put-attribute name="title" value="Business Service C Corporation" />
+		<put-attribute name="body" value="/WEB-INF/view/businessServices/businessServicesDropDown/C_Corporation.jsp" />
+	</definition>
+	
+	<definition name="sCorporationForBSAL" extends="base.busSerAL">
+		<put-attribute name="title" value="Business Service S Corporation" />
+		<put-attribute name="body" value="/WEB-INF/view/businessServices/businessServicesDropDown/S_Corporation.jsp" />
+	</definition>	
+	
+	<definition name="foreignQualificationsForBSAL" extends="base.busSerAL">
+		<put-attribute name="title" value="Business Service Foreign Qualification" />
+		<put-attribute name="body" value="/WEB-INF/view/businessServices/businessServicesDropDown/ForeignQualifications.jsp" />
+	</definition>
+	
+	<definition name="amendmentsForBSAL" extends="base.busSerAL">
+		<put-attribute name="title" value="Business Service Amendments Changes" />
+		<put-attribute name="body" value="/WEB-INF/view/businessServices/businessServicesDropDown/AmendmentsChanges.jsp" />
+	</definition>
+	
+	<definition name="dissolutionsOrTerminationsForBSAL" extends="base.busSerAL">
+		<put-attribute name="title" value="Business Service Dissolutions or Terminations" />
+		<put-attribute name="body" value="/WEB-INF/view/businessServices/businessServicesDropDown/DissolutionsTerminations.jsp" />
+	</definition>
+	
+	<definition name="nameChangeForBSAL" extends="base.busSerAL">
+		<put-attribute name="title" value="Business Service Name Change" />
+		<put-attribute name="body" value="/WEB-INF/view/businessServices/businessServicesDropDown/NameChange.jsp" />
+	</definition>
+	
+	<definition name="conversionsForBSAL" extends="base.busSerAL">
+		<put-attribute name="title" value="Business Service Conversions" />
+		<put-attribute name="body" value="/WEB-INF/view/businessServices/businessServicesDropDown/Conversions.jsp" />
+	</definition>
+	
+	<definition name="nameAvailabilityCheckForBSAL" extends="base.busSerAL">
+		<put-attribute name="title" value="Business Service Name Availability Check" />
+		<put-attribute name="body" value="/WEB-INF/view/businessServices/businessServicesDropDown/NameAvailabilityCheck.jsp" />
+	</definition>
+	
+	<definition name="nameReservationForBSAL" extends="base.busSerAL">
+		<put-attribute name="title" value="Business Service Name Reservation" />
+		<put-attribute name="body" value="/WEB-INF/view/businessServices/businessServicesDropDown/NameReservation.jsp" />
+	</definition>
+	
+	<definition name="doingBusinessAsForBSAL" extends="base.busSerAL">
+		<put-attribute name="title" value="Business Service Doing Business As" />
+		<put-attribute name="body" value="/WEB-INF/view/businessServices/businessServicesDropDown/DoingBusinessAs.jsp" />
+	</definition>
+	
+	<definition name="trademarkStateRegistrationForBSAL" extends="base.busSerAL">
+		<put-attribute name="title" value="Business Service Trademark State Registration" />
+		<put-attribute name="body" value="/WEB-INF/view/businessServices/businessServicesDropDown/TrademarkStateRegistration.jsp" />
+	</definition>
+	
+	<definition name="annualReportsForBSAL" extends="base.busSerAL">
+		<put-attribute name="title" value="Business Service Annual Reports" />
+		<put-attribute name="body" value="/WEB-INF/view/businessServices/businessServicesDropDown/AnnualReports.jsp" />
+	</definition>
+	
+	<definition name="initialReportsForBSAL" extends="base.busSerAL">
+		<put-attribute name="title" value="Business Service Initial Reports" />
+		<put-attribute name="body" value="/WEB-INF/view/businessServices/businessServicesDropDown/InitialReports.jsp" />
+	</definition>
+	
+	<definition name="federalTaxIDForBSAL" extends="base.busSerAL">
+		<put-attribute name="title" value="Business Service Federal Tax ID" />
+		<put-attribute name="body" value="/WEB-INF/view/businessServices/businessServicesDropDown/FederalTaxId.jsp" />
+	</definition>
+	
+	<definition name="asStateTaxIDAL" extends="base.busSerAL">
+		<put-attribute name="title" value="Business Service State Tax ID" />
+		<put-attribute name="body" value="/WEB-INF/view/businessServices/businessServicesDropDown/StateTaxId.jsp" />
+	</definition>
+	
+	<definition name="fiveZeroOneApplicationForBSAL" extends="base.busSerAL">
+		<put-attribute name="title" value="Business Service 501(c)(3) Application" />
+		<put-attribute name="body" value="/WEB-INF/view/businessServices/businessServicesDropDown/501c3Application.jsp" />
+	</definition>
+	
+	<definition name="certificateOfGoodStandingForBSAL" extends="base.busSerAL">
+		<put-attribute name="title" value="Business Service Certificate Of Good Standing" />
+		<put-attribute name="body" value="/WEB-INF/view/businessServices/businessServicesDropDown/CertificateOfGoodStanding.jsp" />
+	</definition>
+	
+	<definition name="certifiedCopiesForBSAL" extends="base.busSerAL">
+		<put-attribute name="title" value="Business Service Certified Copies" />
+		<put-attribute name="body" value="/WEB-INF/view/businessServices/businessServicesDropDown/CertifiedCopies.jsp" />
+	</definition>
+	
+	<definition name="reinstatementOfBusinessForBSAL" extends="base.busSerAL">
+		<put-attribute name="title" value="Business Service Reinstatement Of Business" />
+		<put-attribute name="body" value="/WEB-INF/view/businessServices/businessServicesDropDown/ReinstatementOfBusiness.jsp" />
+	</definition>
+	
+	<definition name="registeredAgentForBSAL" extends="base.busSerAL">
+		<put-attribute name="title" value="Business Service Registered Agent" />
+		<put-attribute name="body" value="/WEB-INF/view/businessServices/businessServicesDropDown/RegisteredAgent.jsp" />
+	</definition>
+	
+	<!--Business Services State Forms Tiles-->	
+	
+	<definition name="newStateFormCreation" extends="base.busSerAL">
+		<put-attribute name="title" value="State Form" />
+		<put-attribute name="body" value="/WEB-INF/view/businessServices/stateforms/stateFormModification.jsp" />
+	</definition>
+	
+	<definition name="userMyAccountRedirection" extends="base.busSerAL">
+		<put-attribute name="title" value="Pending State Form Saving" />
+		<put-attribute name="body" value="/WEB-INF/view/businessServices/stateforms/pending_StateFormsSaving.jsp" />
+	</definition>
+	
+	<definition name="stateFormCheckoutDisplayCreation" extends="base.busSerAL">
+		<put-attribute name="title" value="State Form Finish Order Display" />
+		<put-attribute name="body" value="/WEB-INF/view/businessServices/stateforms/stateFormCheckoutDisplay.jsp" />
+	</definition>
+	
+	<definition name="stateFormCheckoutPayment" extends="base.busSerAL">
+		<put-attribute name="title" value="All State Forms Checkout Payment Info" />
+		<put-attribute name="body" value="/WEB-INF/view/businessServices/stateforms/checkout_StateForms_Payment.jsp" />
+	</definition>
+	
+	<definition name="completedStateFormsForUser" extends="base.busSerAL">
+		<put-attribute name="title" value="Completed State Forms For User" />
+		<put-attribute name="body" value="/WEB-INF/view/businessServices/stateforms/completed_StateForms_for_User.jsp" />
+	</definition>
+	
+	<definition name="completedStateFormsForAdmin" extends="base.busSerAL">
+		<put-attribute name="title" value="Completed State Forms For Admin" />
+		<put-attribute name="body" value="/WEB-INF/view/businessServices/stateforms/completed_StateForms_for_Admin.jsp" />
+	</definition>
+	
+	<!--Additional Services Forms Tiles-->	
+	
+	<definition name="additionalSerFormModification" extends="base.busSerAL">
+		<put-attribute name="title" value="Additional Service Form" />
+		<put-attribute name="body" value="/WEB-INF/view/businessServices/additionalform/additionalSevice_Form_Modification.jsp" />
+	</definition>
+	
+	<definition name="additionalServiceFormCheckoutDisplayCreation" extends="base.busSerAL">
+		<put-attribute name="title" value="Additional Service Finish Order Display" />
+		<put-attribute name="body" value="/WEB-INF/view/businessServices/additionalform/additionalServiceFormCheckoutDisplay.jsp" />
+	</definition>
+	
+	<!--State Tax ID Forms Tiles-->	
+	
+	<definition name="stateTaxIdFormModification" extends="base.busSerAL">
+		<put-attribute name="title" value="State Tax ID Form" />
+		<put-attribute name="body" value="/WEB-INF/view/businessServices/statetaxidforms/stateTaxId_Form_Modification.jsp" />
+	</definition>
+	
+	<definition name="stateTaxIdFormCheckoutDisplayCreation" extends="base.busSerAL">
+		<put-attribute name="title" value="State Tax ID Finish Order Display" />
+		<put-attribute name="body" value="/WEB-INF/view/businessServices/statetaxidforms/stateTaxIdFormCheckoutDisplay.jsp" />
+	</definition>
+	
+	<!--Free Federal Tax Id forms Tiles-->	
+	
+	<definition name="freeFederalTaxIdRedirection" extends="base.busSerAL">
+		<put-attribute name="title" value="Free Fedral Tax Id Home Redirection" />
+		<put-attribute name="body" value="/WEB-INF/view/businessServices/freefederalforms/free_FederalTaxHome_Redirection.jsp" />
+	</definition>
+	
+	<definition name="freeFederalTaxIdModification" extends="base.busSerAL">
+		<put-attribute name="title" value="Free Fedral Tax Id Form Modification" />
+		<put-attribute name="body" value="/WEB-INF/view/businessServices/freefederalforms/free_FederalTaxForm_Modification.jsp" />
+	</definition>
+	
+	<definition name="freeFederalCheckoutDisplayCreation" extends="base.busSerAL">
+		<put-attribute name="title" value="Free Fedral Tax Id Form Checkout Display" />
+		<put-attribute name="body" value="/WEB-INF/view/businessServices/freefederalforms/free_FederalCheckout_Display.jsp" />
+	</definition>
+	
+	<definition name="freeFederalWithStateFormCheckoutDisplayCreation" extends="base.busSerAL">
+		<put-attribute name="title" value="Free Fedral Tax Id With State Form Checkout Display" />
+		<put-attribute name="body" value="/WEB-INF/view/businessServices/freefederalforms/free_Federal_With_StateForms_Checkout_Display.jsp" />
+	</definition>
+	
+	<!--All Forms Payments Tiles-->	
+	
+	<definition name="addToCartStateForms" extends="base.busSerAL">
+		<put-attribute name="title" value="Documents add to Cart" />
+		<put-attribute name="body" value="/WEB-INF/view/businessServices/paymentForms/add_To_Cart_For_AllForms.jsp" />
+	</definition>
+	
+	<definition name="authorizeCreditCardRedirection" extends="base.busSerAL">
+		<put-attribute name="title" value="Authorize Credit Card Info" />
+		<put-attribute name="body" value="/WEB-INF/view/businessServices/paymentForms/authorize_credit_card_Info.jsp" />
+	</definition>
+	
+	<definition name="PaymentTransactionSuccess" extends="base.busSerAL">
+		<put-attribute name="title" value="Payment Transaction Info" />
+		<put-attribute name="body" value="/WEB-INF/view/businessServices/paymentForms/document_Payment_Approved.jsp" />
+	</definition>
+	
+	
+	<!--Single Federal Forms Tiles-->	
+	
+	<definition name="newFederalFormCreation" extends="base.busSerAL">
+		<put-attribute name="title" value="Federal Form" />
+		<put-attribute name="body" value="/WEB-INF/view/federalforms/singlefederal/singleFederalModification.jsp" />
+	</definition>
+	
+	<definition name="federalTaxFormCheckoutDisplayCreation" extends="base.busSerAL">
+		<put-attribute name="title" value="Federal Tax Id Form Finish Order Display" />
+		<put-attribute name="body" value="/WEB-INF/view/federalforms/singlefederal/singleFederalCheckoutDisplay.jsp" />
+	</definition>
+	
+	<!--S-Corporation Forms Tiles-->	
+	
+	<definition name="newSCorpFormCreation" extends="base.busSerAL">
+		<put-attribute name="title" value="S Corporation Form" />
+		<put-attribute name="body" value="/WEB-INF/view/federalforms/scorp/s_CorpModification.jsp" />
+	</definition>
+	
+	<definition name="sCorpFormCheckoutDisplayCreation" extends="base.busSerAL">
+		<put-attribute name="title" value="S Corporation Form Finish Order Display" />
+		<put-attribute name="body" value="/WEB-INF/view/federalforms/scorp/s_CorpCheckoutDisplay.jsp" />
+	</definition>
+	
+	<!--501 Application Forms Tiles-->	
+	
+	<definition name="newFiveZeroOneFormCreation" extends="base.busSerAL">
+		<put-attribute name="title" value="501(c)(3) Application Form" />
+		<put-attribute name="body" value="/WEB-INF/view/federalforms/fivezeroone/fiveZeroOneModification.jsp" />
+	</definition>
+	
+	<definition name="fiveZeroOneFormCheckoutDisplayCreation" extends="base.busSerAL">
+		<put-attribute name="title" value="501(c)(3) Application Form Finish Order Display" />
+		<put-attribute name="body" value="/WEB-INF/view/federalforms/fivezeroone/fiveZeroOneCheckoutDisplay.jsp" />
+	</definition>
+	
+	<!--All Federal Forms Info Tiles-->	
+	
+	<definition name="pendingFederalFormsRedirection" extends="base.busSerAL">
+		<put-attribute name="title" value="Pending Federal Form Saving" />
+		<put-attribute name="body" value="/WEB-INF/view/federalforms/allfederalforms/pending_FederalForms_Saving.jsp" />
+	</definition>
+	
+	<definition name="federalFormCheckoutPayment" extends="base.busSerAL">
+		<put-attribute name="title" value="All Federal Form Checkout Payment Info" />
+		<put-attribute name="body" value="/WEB-INF/view/federalforms/allfederalforms/checkout_FederalForms_Payment.jsp" />
+	</definition>
+	
+	<definition name="completedFederalFormsForUser" extends="base.busSerAL">
+		<put-attribute name="title" value="Completed Federal Forms For User" />
+		<put-attribute name="body" value="/WEB-INF/view/federalforms/allfederalforms/completed_FederalForms_for_User.jsp" />
+	</definition>
+	
+	<definition name="completedFederalFormsForAdmin" extends="base.busSerAL">
+		<put-attribute name="title" value="Completed Federal Forms For Admin" />
+		<put-attribute name="body" value="/WEB-INF/view/federalforms/allfederalforms/completed_FederalForms_for_Admin.jsp" />
+	</definition>
+		
+	<!--Login Page Tiles-->
+
+	<definition name="base.logIn" template="/WEB-INF/view/layouts/layout.jsp">
+		<put-attribute name="title" value="" />
+		<put-attribute name="header" value="/WEB-INF/view/layouts/loginHeader.jsp" />		
+		<put-attribute name="body" value="" />
+		<put-attribute name="footer" value="/WEB-INF/view/layouts/footer.jsp" />
+	</definition>
+
+	<definition name="loginPage" extends="base.logIn">
+		<put-attribute name="title" value="User LogIn" />
+		<put-attribute name="body" value="/WEB-INF/view/userInfo/logIn.jsp" />
+	</definition>
+	
+	<definition name="lnForgetPass" extends="base.logIn">
+		<put-attribute name="title" value="Forget Password With Email" />
+		<put-attribute name="body" value="/WEB-INF/view/userInfo/forgetPasswordWithEmail.jsp" />
+	</definition>
+	
+	<definition name="forgetPasswordWithEmailChecking" extends="base.logIn">
+		<put-attribute name="title" value="Forget Password With Security Pin" />
+		<put-attribute name="body" value="/WEB-INF/view/userInfo/forgetPasswordWithSecurityPin.jsp" />
+	</definition>
+	
+	
+	<!--Registration Page Tiles-->
+
+	<definition name="base.registration" template="/WEB-INF/view/layouts/layout.jsp">
+		<put-attribute name="title" value="" />
+		<put-attribute name="header" value="/WEB-INF/view/layouts/registrationHeader.jsp" />		
+		<put-attribute name="body" value="" />
+		<put-attribute name="footer" value="/WEB-INF/view/layouts/footer.jsp" />
+	</definition>
+
+	<definition name="registrationPage" extends="base.registration">
+		<put-attribute name="title" value="Registration" />
+		<put-attribute name="body" value="/WEB-INF/view/userInfo/registration.jsp" />
+	</definition>
+	
+	
+	<!--Contact Us Before LogIn Page Tiles-->
+
+	<definition name="base.contactUs" template="/WEB-INF/view/layouts/layout.jsp">
+		<put-attribute name="title" value="" />
+		<put-attribute name="header" value="/WEB-INF/view/layouts/contactUsBLHeader.jsp" />		
+		<put-attribute name="body" value="" />
+		<put-attribute name="footer" value="/WEB-INF/view/layouts/footer.jsp" />
+	</definition>
+
+	<definition name="contactUs" extends="base.contactUs">
+		<put-attribute name="title" value="Contact Us" />
+		<put-attribute name="body" value="/WEB-INF/view/contactus/contactUs.jsp" />
+	</definition>
+	
+	<!--Contact Us After LogIn Page Tiles-->
+
+	<definition name="base.contactUsAL" template="/WEB-INF/view/layouts/layout.jsp">
+		<put-attribute name="title" value="" />
+		<put-attribute name="header" value="/WEB-INF/view/layouts/contactUsALHeader.jsp" />		
+		<put-attribute name="body" value="" />
+		<put-attribute name="footer" value="/WEB-INF/view/layouts/footer.jsp" />
+	</definition>
+
+	<definition name="contactUsAL" extends="base.contactUsAL">
+		<put-attribute name="title" value="Contact Us" />
+		<put-attribute name="body" value="/WEB-INF/view/contactus/contactUs.jsp" />
+	</definition>
+	
+		
+
+</tiles-definitions>

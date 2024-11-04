@@ -1,0 +1,92 @@
+/* tables */
+table.admtabframe {
+font-family:arial;
+background-color: #595959;
+margin:10px 0pt 15px;
+font-size: 10pt;
+width:815px;
+text-align: center;
+border: 2px ridge #5c5c5c;
+}
+
+table.admtabframe tbody td {
+color: black;
+padding: 4px;
+background-color: white;
+vertical-align: top;
+font: 1.05em/1.6em Sans-serif;
+border: 1px dotted #999;
+}
+table.admtabframe tbody tr.even td {
+background-color: #f2f2f2;
+}
+
+table.admtabframe tbody tr.odd td {
+background-color: white;
+}
+table.admtabframe .tbl-td-width{width: 450px; text-align: right; padding-right: 30px;}
+
+table.admtabframe .img-wdt{width: 120px; text-align: center; padding-left: 30px; padding-right: 30px;}
+
+
+/* --- Payment selected documents Cart Info ---- */
+
+table.payment-cart-frame {
+font-family:arial;
+background-color: #595959;
+margin:10px 0pt 15px;
+font-size: 10pt;
+width:815px;
+border: 2px ridge #5c5c5c;
+}
+
+table.payment-cart-frame tbody th {
+color: white;
+padding: 4px;
+background-color: #4c4c4c;
+vertical-align: top;
+font: bold 1.25em/1.6em 'Lora', serif;
+padding-left: 12px; padding-right: 12px;
+text-align: center;
+border-bottom: 2px ridge #5c5c5c;
+border-right: 1px solid #fff;
+}
+
+table.payment-cart-frame tbody td {
+color: black;
+padding: 4px;
+vertical-align: top;
+font: 1.05em/1.6em Sans-serif;
+border: 1px dotted #999;
+padding-left: 12px; padding-right: 12px;
+vertical-align: middle;
+}
+
+table.payment-cart-frame tbody tr:nth-child(even) {
+background-color: #f2f2f2;
+}
+
+table.payment-cart-frame tbody tr:nth-child(odd) {
+background-color: white;
+}
+
+table.payment-cart-frame tbody tr:last-child{background-color: #fff;}
+
+.tbl-th1-width{min-width: 40px;width: auto;}
+.tbl-th2-width{min-width: 360px;width: auto;}
+.tbl-th3-width{min-width: 160px;width: auto;}
+.tbl-th4-width{min-width: 80px;width: auto;}
+table.payment-cart-frame tbody .tbl-th5-width{display: inline-block; width: 40px; border-bottom: 2px solid #fff; border-top: 2px solid #fff; border-right: 2px solid #fff; background-color: white;}
+
+.tbl-td1-width{text-align: center;}
+.tbl-td3-width{text-align: center;}
+.tbl-td4-width{text-align: right;}
+table.payment-cart-frame tbody .tbl-td5-width{border-left: 2px ridge #5c5c5c; border-right: 2px ridge #5c5c5c; border-top: 1px dotted #999; border-bottom: 1px dotted #999;}
+
+
+table.payment-cart-frame tbody .tbl-td1-totalwd{border-left: 3px solid #fff; border-right: 3px solid #fff; border-top: 2px ridge #5c5c5c; border-bottom: 3px solid #fff;}
+table.payment-cart-frame tbody .tbl-td2-totalwd{border-left: 3px solid #fff; border-top: 2px ridge #5c5c5c; border-bottom: 3px solid #fff;}
+table.payment-cart-frame tbody .tbl-td3-totalwd{border-left: 2px ridge #5c5c5c; border-right: 2px ridge #5c5c5c; border-top: 2px ridge #5c5c5c; border-bottom: 1px solid #fff; text-align: center;}
+table.payment-cart-frame tbody .tbl-td4-totalwd{border-left: 2px ridge #5c5c5c; border-right: 2px ridge #5c5c5c; border-top: 2px ridge #5c5c5c; border-bottom: 1px solid #fff; text-align: right;}
+table.payment-cart-frame tbody .tbl-td5-totalwd{border-right: 3px solid #fff; border-top: 2px ridge #5c5c5c; border-bottom: 3px solid #fff;}
+

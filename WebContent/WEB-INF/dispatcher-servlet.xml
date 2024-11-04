@@ -1,0 +1,348 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:jdbc="http://www.springframework.org/schema/jdbc" xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="
+			http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+			http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+			http://www.springframework.org/schema/jdbc http://www.springframework.org/schema/jdbc/spring-jdbc.xsd
+			http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd
+			http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd
+			http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-3.0.xsd">
+
+	<context:component-scan base-package="com.legalnod.controller"/>
+	<mvc:annotation-driven />
+	
+	<bean id="viewResolver"
+		class="org.springframework.web.servlet.view.UrlBasedViewResolver">
+		<property name="viewClass">
+			<value>
+				org.springframework.web.servlet.view.tiles2.TilesView
+			</value>
+		</property>
+	</bean>
+	<bean id="tilesConfigurer"
+		class="org.springframework.web.servlet.view.tiles2.TilesConfigurer">
+		<property name="definitions">
+			<list>
+				<value>/WEB-INF/tiles.xml</value>
+			</list>
+		</property>
+	</bean>	
+	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">		
+		<property name="prefix">
+			<value>/WEB-INF/view/</value>
+		</property>
+		<property name="suffix">
+			<value>.jsp</value>
+		</property>
+	</bean>	
+	
+	<!-- Configure to plugin JSON as request and response in method handler -->
+	<bean class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter">
+		<property name="messageConverters">
+			<list>
+				<ref bean="jsonMessageConverter"/>
+			</list>
+		</property>
+	</bean>
+	<!-- Configure bean to convert JSON to POJO and vice versa -->
+	<bean id="jsonMessageConverter" class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter">
+	</bean>
+		
+	<!--Test Data base -->	
+	<!--<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource">
+		<property name="driverClassName" value="org.postgresql.Driver"></property>
+		<property name="url" value="jdbc:postgresql://192.168.12.12:5432/LegalNodDB3"></property>
+		<property name="username" value="postgres"></property>
+		<property name="password" value="mf0rt3*"></property>
+		<property name="initialSize" value="1"></property>
+		<property name="maxActive" value="110"></property>		
+	</bean>-->
+	
+	<!--Production Data base -->	
+	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource">
+		<property name="driverClassName" value="org.postgresql.Driver"></property>
+		<property name="url" value="jdbc:postgresql://localhost:5434/LegalNodDB1"></property>
+		<property name="username" value="postgres"></property>
+		<property name="password" value="Ln@T0mPg!$#1"></property>
+		<property name="initialSize" value="1"></property>
+		<property name="maxActive" value="200"></property>		
+	</bean>
+	
+	<mvc:annotation-driven/>
+	<!-- Handles HTTP GET requests for /resources/** by efficiently serving up static resources in the ${webappRoot}/resources directory -->
+	<bean id="hibernatetemplate" class="org.springframework.orm.hibernate3.HibernateTemplate">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	
+	<bean id="sessionFactory"
+		class="org.springframework.orm.hibernate3.annotation.AnnotationSessionFactoryBean">
+		<property name="dataSource">
+			<ref bean="dataSource" />
+		</property>
+		<property name="hibernateProperties">
+			<props>
+				<prop key="hibernate.dialect">
+					org.hibernate.dialect.PostgreSQLDialect
+				</prop>				
+			</props>
+		</property>		
+		
+		<property name="annotatedClasses">
+			<list>
+				<value>com.legalnod.model.DropdownStateModel</value>
+				<value>com.legalnod.model.NACDropdownCompanyFormingModel</value>
+				<value>com.legalnod.model.Abbrevations</value>
+				<value>com.legalnod.model.AdditionalFormsAttributesAndValuesSaving</value>
+				<value>com.legalnod.model.AdditionalFormsAttributesInfo</value>
+				<value>com.legalnod.model.AdditionalFormsFieldsInfo</value>
+				<value>com.legalnod.model.AllFederalFormsCheckoutPaymentAndUserContactSaving</value>
+				<value>com.legalnod.model.AllFederalFormsDataSaving</value>
+				<value>com.legalnod.model.AllFederalFormsPaymentInfoSaving</value>
+				<value>com.legalnod.model.AllStateAndFederalFormsAddCartPaymentSaving</value>
+				<value>com.legalnod.model.AllStateFormsCheckoutPaymentAndUserContactSaving</value>
+				<value>com.legalnod.model.AllStateFormsDataSaving</value>
+				<value>com.legalnod.model.AllStateFormsPaymentInfoSaving</value>
+				<value>com.legalnod.model.BusinessFormsAttributesAndValuesSaving</value>
+				<value>com.legalnod.model.BusinessFormsAttributesInfo</value>
+				<value>com.legalnod.model.BusinessFormsFieldsInfo</value>
+				<value>com.legalnod.model.FederalFormsPriceInfo</value>						
+				<value>com.legalnod.model.FederalTaxIdFormsAttributesAndValuesSaving</value>
+				<value>com.legalnod.model.FederalTaxIdFormsAttributesInfo</value>
+				<value>com.legalnod.model.FivezerooneAppFormsAttributesAndValuesSaving</value>
+				<value>com.legalnod.model.FivezerooneAppFormsAttributesInfo</value>
+				<value>com.legalnod.model.FormFederalAttributesAndValuesSaving</value>
+				<value>com.legalnod.model.FormFederalDocumentsDataSaving</value>
+				<value>com.legalnod.model.Forms</value>
+				<value>com.legalnod.model.NameAvailabilityCheckSaving</value>
+				<value>com.legalnod.model.PromoCodeWithBonusPriceInfo</value>				
+				<value>com.legalnod.model.ScorporationFormsAttributesAndValuesSaving</value>
+				<value>com.legalnod.model.ScorporationFormsAttributesInfo</value>
+				<value>com.legalnod.model.StateFormsPriceInfo</value>
+				<value>com.legalnod.model.States</value>
+				<value>com.legalnod.model.StateTaxFormsAttributesAndValuesSaving</value>
+				<value>com.legalnod.model.StateTaxFormsAttributesInfo</value>
+				<value>com.legalnod.model.StateTaxFormsFieldsInfo</value>
+				<value>com.legalnod.model.UsersInformation</value>
+				<value>com.legalnod.model.UsersSessionTime</value>
+				<value>com.legalnod.model.UserPaymentTransactionInfoSaving</value>							
+			</list>
+		</property>		
+	</bean>
+	<bean id="contentManager"
+                class="org.springframework.web.accept.ContentNegotiationManagerFactoryBean">
+                <property name="favorPathExtension" value="true"/>
+                <property name="ignoreAcceptHeader" value="true" />
+                <property name="defaultContentType" value="text/html" />
+                <property name="useJaf" value="false"/>
+                <property name="mediaTypes">
+	                <map>
+	                    <entry key="html" value="text/html" />
+	                    <entry key="json" value="application/json" />
+	                    <entry key="xml" value="application/xml" />
+	                </map>
+                </property>
+        </bean>
+        
+        <bean id="DocCenterService" class="com.legalnod.serviceimpl.DocCenterServiceImpl"/>
+        <bean id="HomeService" class="com.legalnod.serviceimpl.HomeServiceImpl"/>
+        <bean id="CustomDocumentService" class="com.legalnod.serviceimpl.CustomDocumentServiceImpl"/>        
+        <bean id="BusinessServicesService" class="com.legalnod.serviceimpl.BusinessServicesServiceImpl"/>        
+        <bean id="ServiceByStateService" class="com.legalnod.serviceimpl.ServiceByStateServiceImpl"/>          
+        <bean id="ContactUsService" class="com.legalnod.serviceimpl.ContactUsServiceImpl"/>
+        <bean id="UsersInformationService" class="com.legalnod.serviceimpl.UsersInformationServiceImpl"/>
+        <bean id="StateFormsService" class="com.legalnod.serviceimpl.StateFormsServiceImpl"/>
+        <bean id="AdditionalService" class="com.legalnod.serviceimpl.AdditionalServiceImpl"/>
+        <bean id="StateTaxIdService" class="com.legalnod.serviceimpl.StateTaxIdServiceImpl"/>
+        <bean id="FederalFormsService" class="com.legalnod.serviceimpl.FederalFormsServiceImpl"/>
+        <bean id="PaymentGatewayService" class="com.legalnod.serviceimpl.PaymentGatewayServiceImpl"/>
+        <bean id="FederalFormsUpdateService" class="com.legalnod.serviceimpl.FederalFormsUpdateServiceImpl"/>
+        <bean id="FreeFederalFormsService" class="com.legalnod.serviceimpl.FreeFederalFormsServiceImpl"/>
+        
+        <bean id="DropdownStateDAO" class="com.legalnod.daoimpl.DropdownStateDAOImpl">
+        <property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+		</bean>	
+		
+		<bean id="UsersInformationDAO" class="com.legalnod.daoimpl.UsersInformationDAOImpl">
+			<property name="sessionFactory">
+				<ref bean="sessionFactory" />
+			</property>
+		</bean>
+		
+		
+		<bean id="NameAvailabilityCheckSavingDAO" class="com.legalnod.daoimpl.NameAvailabilityCheckSavingDAOImpl">
+			<property name="sessionFactory">
+				<ref bean="sessionFactory" />
+			</property>
+		</bean>	
+		
+		<bean id="BusinessFormsAttributesAndValuesSavingDAO" class="com.legalnod.daoimpl.BusinessFormsAttributesAndValuesSavingDAOImpl">
+			<property name="sessionFactory">
+				<ref bean="sessionFactory" />
+			</property>
+		</bean>
+		
+		<bean id="BusinessFormsAttributesInfoDAO" class="com.legalnod.daoimpl.BusinessFormsAttributesInfoDAOImpl">
+			<property name="sessionFactory">
+				<ref bean="sessionFactory" />
+			</property>
+		</bean>
+		
+		<bean id="AllStateFormsDataSavingDAO" class="com.legalnod.daoimpl.AllStateFormsDataSavingDAOImpl">
+			<property name="sessionFactory">
+				<ref bean="sessionFactory" />
+			</property>
+		</bean>
+		
+		<bean id="AbbrevationsDAO" class="com.legalnod.daoimpl.AbbrevationsDAOImpl">
+			<property name="sessionFactory">
+				<ref bean="sessionFactory" />
+			</property>
+		</bean>
+		
+		<bean id="AdditionalFormsAttributesAndValuesSavingDAO" class="com.legalnod.daoimpl.AdditionalFormsAttributesAndValuesSavingDAOImpl">
+			<property name="sessionFactory">
+				<ref bean="sessionFactory" />
+			</property>
+		</bean>
+		
+		<bean id="AdditionalFormsAttributesInfoDAO" class="com.legalnod.daoimpl.AdditionalFormsAttributesInfoDAOImpl">
+			<property name="sessionFactory">
+				<ref bean="sessionFactory" />
+			</property>
+		</bean>
+		
+		<bean id="StateTaxFormsAttributesAndValuesSavingDAO" class="com.legalnod.daoimpl.StateTaxFormsAttributesAndValuesSavingDAOImpl">
+			<property name="sessionFactory">
+				<ref bean="sessionFactory" />
+			</property>
+		</bean>
+		
+		<bean id="StateTaxFormsAttributesInfoDAO" class="com.legalnod.daoimpl.StateTaxFormsAttributesInfoDAOImpl">
+			<property name="sessionFactory">
+				<ref bean="sessionFactory" />
+			</property>
+		</bean>
+		
+		<bean id="StateFormsPriceInfoDAO" class="com.legalnod.daoimpl.StateFormsPriceInfoDAOImpl">
+			<property name="sessionFactory">
+				<ref bean="sessionFactory" />
+			</property>
+		</bean>
+		
+		<bean id="FederalFormsPriceInfoDAO" class="com.legalnod.daoimpl.FederalFormsPriceInfoDAOImpl">
+			<property name="sessionFactory">
+				<ref bean="sessionFactory" />
+			</property>
+		</bean>
+		
+		<bean id="AllStateFormsPaymentInfoSavingDAO" class="com.legalnod.daoimpl.AllStateFormsPaymentInfoSavingDAOImpl">
+			<property name="sessionFactory">
+				<ref bean="sessionFactory" />
+			</property>
+		</bean>
+		
+		<bean id="PromoCodeWithBonusPriceInfoDAO" class="com.legalnod.daoimpl.PromoCodeWithBonusPriceInfoDAOImpl">
+			<property name="sessionFactory">
+				<ref bean="sessionFactory" />
+			</property>
+		</bean>
+		
+		<bean id="AllStateFormsCheckoutPaymentAndUserContactSavingDAO" class="com.legalnod.daoimpl.AllStateFormsCheckoutPaymentAndUserContactSavingDAOImpl">
+			<property name="sessionFactory">
+				<ref bean="sessionFactory" />
+			</property>
+		</bean>
+		
+		<bean id="AllStateAndFederalFormsAddCartPaymentSavingDAO" class="com.legalnod.daoimpl.AllStateAndFederalFormsAddCartPaymentSavingDAOImpl">
+			<property name="sessionFactory">
+				<ref bean="sessionFactory" />
+			</property>
+		</bean>
+		
+		<bean id="FederalTaxIdFormsAttributesInfoDAO" class="com.legalnod.daoimpl.FederalTaxIdFormsAttributesInfoDAOImpl">
+			<property name="sessionFactory">
+				<ref bean="sessionFactory" />
+			</property>
+		</bean>
+		
+		<bean id="FederalTaxIdFormsAttributesAndValuesSavingDAO" class="com.legalnod.daoimpl.FederalTaxIdFormsAttributesAndValuesSavingDAOImpl">
+			<property name="sessionFactory">
+				<ref bean="sessionFactory" />
+			</property>
+		</bean>
+		
+		<bean id="ScorporationFormsAttributesInfoDAO" class="com.legalnod.daoimpl.ScorporationFormsAttributesInfoDAOImpl">
+			<property name="sessionFactory">
+				<ref bean="sessionFactory" />
+			</property>
+		</bean>
+		
+		<bean id="ScorporationFormsAttributesAndValuesSavingDAO" class="com.legalnod.daoimpl.ScorporationFormsAttributesAndValuesSavingDAOImpl">
+			<property name="sessionFactory">
+				<ref bean="sessionFactory" />
+			</property>
+		</bean>
+		
+		<bean id="FivezerooneAppFormsAttributesInfoDAO" class="com.legalnod.daoimpl.FivezerooneAppFormsAttributesInfoDAOImpl">
+			<property name="sessionFactory">
+				<ref bean="sessionFactory" />
+			</property>
+		</bean>
+		
+		<bean id="FivezerooneAppFormsAttributesAndValuesSavingDAO" class="com.legalnod.daoimpl.FivezerooneAppFormsAttributesAndValuesSavingDAOImpl">
+			<property name="sessionFactory">
+				<ref bean="sessionFactory" />
+			</property>
+		</bean>
+		
+		<bean id="AllFederalFormsDataSavingDAO" class="com.legalnod.daoimpl.AllFederalFormsDataSavingDAOImpl">
+			<property name="sessionFactory">
+				<ref bean="sessionFactory" />
+			</property>
+		</bean>
+		
+		<bean id="AllFederalFormsPaymentInfoSavingDAO" class="com.legalnod.daoimpl.AllFederalFormsPaymentInfoSavingDAOImpl">
+			<property name="sessionFactory">
+				<ref bean="sessionFactory" />
+			</property>
+		</bean>
+		
+		<bean id="AllFederalFormsCheckoutPaymentAndUserContactSavingDAO" class="com.legalnod.daoimpl.AllFederalFormsCheckoutPaymentAndUserContactSavingDAOImpl">
+			<property name="sessionFactory">
+				<ref bean="sessionFactory" />
+			</property>
+		</bean>
+		
+		<bean id="FormFederalDocumentsDataSavingDAO" class="com.legalnod.daoimpl.FormFederalDocumentsDataSavingDAOImpl">
+			<property name="sessionFactory">
+				<ref bean="sessionFactory" />
+			</property>
+		</bean>
+		
+		<bean id="FormFederalAttributesAndValuesSavingDAO" class="com.legalnod.daoimpl.FormFederalAttributesAndValuesSavingDAOImpl">
+			<property name="sessionFactory">
+				<ref bean="sessionFactory" />
+			</property>
+		</bean>
+		
+		<bean id="StatesDAO" class="com.legalnod.daoimpl.StatesDAOImpl">
+			<property name="sessionFactory">
+				<ref bean="sessionFactory" />
+			</property>
+		</bean>
+		
+		<bean id="UserPaymentTransactionInfoSavingDAO" class="com.legalnod.daoimpl.UserPaymentTransactionInfoSavingDAOImpl">
+			<property name="sessionFactory">
+				<ref bean="sessionFactory" />
+			</property>
+		</bean>		
+       
+	<mvc:resources mapping="/resources/**" location="/WEB-INF/resources/"/>		
+</beans>

@@ -1,0 +1,93 @@
+/* tables */
+table.tablesorter {
+font-family:arial;
+background-color: #595959;
+margin:10px 0pt 15px;
+font-size: 10pt;
+width:815px;
+text-align: center;
+border: 2px ridge #5c5c5c;
+}
+
+table.tablesorter thead tr th, table.tablesorter tfoot tr th {
+background-color: #595959;
+border: 1px solid #fff;
+font: bold 1.25em/1em Georgia;;
+padding-right: 20px;
+padding-left: 20px;
+height: 32px;
+color: white;
+white-space: nowrap;
+text-align: center;
+cursor: text;
+}
+
+table.tablesorter thead tr .header {
+background-image: url(/legalnod/resources/images/arrow-none.gif);
+background-repeat: no-repeat;
+background-position: center right;
+cursor: pointer;
+}
+
+table.tablesorter tbody td {
+color: black;
+padding: 4px;
+vertical-align: middle;
+font: 1.03em/1.6em Sans-serif;
+border: 1px dotted #999;
+}
+
+
+table.tablesorter tr:nth-child(even) td{background: #f2f2f2}
+
+table.tablesorter tr:nth-child(odd) td{background: #FFF}
+
+table.tablesorter thead tr .headerSortUp {
+background-image: url(/legalnod/resources/images/arrow-up.gif);
+}
+
+table.tablesorter thead tr .headerSortDown {
+background-image: url(/legalnod/resources/images/arrow-down.gif);
+}
+
+table.tablesorter thead tr .headerSortDown, table.tablesorter thead tr .headerSortUp {
+background-color: #595959;
+}
+
+.pg-normal{
+color: #00a9f1;
+text-transform:uppercase;
+background:white;
+border: white 1px solid ;
+overflow:visible;
+width:110px;
+padding-right:10px;
+padding-left:10px;
+cursor:pointer;
+font:bold 0.9em/1.5em Arial;
+outline: none; 
+}
+
+.pg-normal:hover{
+color: blue;
+text-transform:uppercase;
+background:white;
+border: white 1px solid ;
+overflow:visible;
+width:110px;
+padding-right:10px;
+padding-left:10px;
+cursor:pointer;
+font:bold 0.9em/1.5em Arial;
+outline: none; 
+}
+
+.paginated{
+width:800px;
+font-size:.8em;
+font-family:arial,sans-serif;
+border:1px solid #ccc;
+border-bottom:none;
+border-right:none;
+outline: none; 
+}
